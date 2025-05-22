@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>(づ｡◕‿‿◕｡)づ Snake Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>(づ｡◕‿‿◕｡)づ Snake Game</h1>
+
+<div class="game-container">
+  <canvas id="gameCanvas" width="900" height="600"></canvas>
+
+  <!-- Start Overlay -->
+  <div id="startOverlay" class="overlay">
+    <button id="startBtn" class="overlay-button">Play</button>
+  </div>
+</div>
+
+
+<div class="ui">
+  <button id="pauseBtn">Pause</button>
+  <button id="muteMusicBtn">Mute Music</button>
+  <button id="muteSfxBtn">Mute SFX</button>
+  <div id="scoreDisplay">Score: 0</div>
+</div>
+
+
+
+
+  <div id="gameOverPopup" class="popup" style="display:none;">
+    <div class="popup-content">
+      <h2>Game Over!</h2>
+      <button id="tryAgainBtn">Try Again</button>
+    </div>
+  </div>
+
+  <!-- Audio -->
+  <audio id="backgroundMusic" src="sounds/background.mp3" loop></audio>
+  <audio id="eatSound" src="sounds/eat.mp3"></audio>
+  <audio id="gameOverSound" src="sounds/gameover.mp3"></audio>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="game.js"></script>
+
+</body>
+</html>
