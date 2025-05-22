@@ -2,7 +2,7 @@
 
 A modern, glowing twist on the classic Snake game! Built with HTML, CSS, and JavaScript. Includes sound effects, background music, mute functions, and pause/resume functionality.
 
-[Play the game](https://nmaneekhat.github.io/neon-snake-game/) 🎮
+[Play the game]( https://github.com/nmaneekhat/neon-snake-game/tree/master) 🎮
 
 ## 🚀 Features
 
