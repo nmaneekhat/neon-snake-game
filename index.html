@@ -9,31 +9,41 @@
 <body>
   <h1>(づ｡◕‿‿◕｡)づ Snake Game</h1>
 
-<div class="game-container">
-  <canvas id="gameCanvas" width="900" height="600"></canvas>
+  <div class="game-container">
+    <!-- Canvas and Overlays wrapped together -->
+    <div class="canvas-wrapper">
+      <canvas id="gameCanvas" width="900" height="600"></canvas>
 
-  <!-- Start Overlay -->
-  <div id="startOverlay" class="overlay">
-    <button id="startBtn" class="overlay-button">Play</button>
-  </div>
-</div>
+      <!-- Start Overlay -->
+      <div id="startOverlay" class="overlay">
+        <button id="startBtn" class="overlay-button">Play</button>
+      </div>
 
+      <!-- Game Over Popup -->
+      <div id="gameOverPopup" class="popup hidden">
+        <div class="popup-content">
+          <h2>Game Over!</h2>
+          <button id="tryAgainBtn">Try Again</button>
+        </div>
+      </div>
 
-<div class="ui">
-  <button id="pauseBtn">Pause</button>
-  <button id="muteMusicBtn">Mute Music</button>
-  <button id="muteSfxBtn">Mute SFX</button>
-  <div id="scoreDisplay">Score: 0</div>
-</div>
-
-
-
-
-  <div id="gameOverPopup" class="popup" style="display:none;">
-    <div class="popup-content">
-      <h2>Game Over!</h2>
-      <button id="tryAgainBtn">Try Again</button>
+      <!-- Pause Overlay -->
+      <div id="pauseOverlay" class="overlay hidden">
+        <div class="pause-buttons">
+          <h2 style="text-align: center;">Game Paused</h2>
+          <button id="resumeBtn" class="overlay-button">Resume</button>
+          <button id="quitBtn" class="overlay-button">Quit to Menu</button>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- UI Buttons -->
+  <div class="ui">
+    <button id="pauseBtn">Pause/Spacebar</button>
+    <button id="muteMusicBtn">Mute Music</button>
+    <button id="muteSfxBtn">Mute SFX</button>
+    <div id="scoreDisplay">Score Count: 0</div>
   </div>
 
   <!-- Audio -->
@@ -41,8 +51,8 @@
   <audio id="eatSound" src="sounds/eat.mp3"></audio>
   <audio id="gameOverSound" src="sounds/gameover.mp3"></audio>
 
+  <!-- Scripts -->
   <script src="/socket.io/socket.io.js"></script>
   <script src="game.js"></script>
-
 </body>
 </html>
