@@ -15,10 +15,12 @@ A modern, glowing twist on the classic Snake game! Built with HTML, CSS, and Jav
 
 ## 🎮 Controls
 
-- `↑`, `↓`, `←`, `→` — Move the snake
-- **Pause Button** — Pause/resume game
+- **Play** — Start the game
+- `arrow keys` keys — Move the snake up, down, left, right
+- `spacebar` key and **Pause** button — Pause/resume game
 - **Try Again** — Restart game after game over
-- **Mute Music/SFX** — Toggle background music and sound effects
+- **Quit to Menu** — Redirect players to main menu
+- **Mute Music/SFX** — Toggle background music and sound effects ON/OFF
 
 ## 🛠️ Tech Stack
 
@@ -27,12 +29,15 @@ A modern, glowing twist on the classic Snake game! Built with HTML, CSS, and Jav
 - JavaScript
 
 ## 📷 Screenshot
+**Main Menu**
+![image](https://github.com/user-attachments/assets/55ba32ea-5afd-439e-9d89-de81b02054c2)
+**Gameplay**
+![image](https://github.com/user-attachments/assets/c5ed5bd9-e5b5-456e-8b07-35825c941852)
+**Game Paused**
+![image](https://github.com/user-attachments/assets/dd1c644c-ea04-4f7a-93a2-cc39077d5cc6)
+**Game Over**
+![image](https://github.com/user-attachments/assets/e2c222f5-f327-4d45-aa27-331944b3f4e2)
 
-![image](https://github.com/user-attachments/assets/7fe26b8e-1275-4725-948e-db980dce2421)
-
-![image](https://github.com/user-attachments/assets/54d5dc66-34b6-4880-9444-ff7c8b520925)
-
-![image](https://github.com/user-attachments/assets/a345a7d6-6d53-446b-a13b-00e0f488258d)
 
 ## 📦 How to Run
 1. Clone the repository:
