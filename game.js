@@ -19,6 +19,11 @@ let gameStarted = false;
 let gamePaused = false;
 let gameOver = false;
 let score = 0;
+let highScore = 0;
+
+if (localStorage.getItem('snakeHighScore')) {
+  highScore = parseInt(localStorage.getItem('snakeHighScore'));
+}
 
 const bgMusic = document.getElementById('backgroundMusic');
 const eatSound = document.getElementById('eatSound');
@@ -126,6 +131,7 @@ function draw() {
   ctx.shadowColor = 'transparent';
 
   document.getElementById('scoreDisplay').textContent = `Score: ${score}`;
+  document.getElementById('highScoreDisplay').textContent = `High Score: ${highScore}`;
 }
 
 function update() {
@@ -146,7 +152,13 @@ function update() {
   snake.unshift(head);
 
   if (head.x === food.x && head.y === food.y) {
-    score++;
+    score=score+128;
+
+    if (score > highScore) {
+      highScore = score;
+      localStorage.setItem('snakeHighScore', highScore);
+    }
+
     if (!sfxMuted) eatSound.play();
     placeFood();
   } else {
@@ -265,4 +277,5 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('tryAgainBtn').addEventListener('click', tryAgain);
   document.getElementById('resumeBtn').addEventListener('click', resumeGame);
   document.getElementById('quitBtn').addEventListener('click', returnToMenu);
+  document.getElementById('quitBtn2').addEventListener('click', returnToMenu);
 });

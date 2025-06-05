@@ -59,6 +59,8 @@ button:hover {
   padding: 10px 20px;
 }
 
+
+
 #scoreDisplay {
   margin-top: 12px;
   font-size: 18px;
@@ -137,3 +139,4 @@ button:hover {
 .hidden {
   display: none;
 }
+
